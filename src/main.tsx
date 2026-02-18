@@ -3,13 +3,11 @@ import React from "react";
 import { createRoot } from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 import App from "./App";
-import "./index.css";
-
-const basename = import.meta.env.BASE_URL.replace(/\/$/, "") || "/";
+import "./index.css"; // Vérifie que ce fichier est bien dans le même dossier (src/)
 
 createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <BrowserRouter basename={basename}>
+    <BrowserRouter>
       <App />
     </BrowserRouter>
   </React.StrictMode>
