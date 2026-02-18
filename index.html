@@ -4,44 +4,36 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Karl-Anthony Garozzo • Future Digital Engineer </title>
+    <title>Karl-Anthony Garozzo • Future Digital Engineer</title>
     <meta name="description" content="Official portfolio of Karl-Anthony Garozzo – engineer and passionate developer." />
     <meta name="author" content="Karl-Anthony Garozzo" />
-    <link rel="icon" type="image/png" href="src/assets/icon-page.png" />
+    
+    <link rel="icon" type="image/png" href="/icon-page.png" />
 
-    <!-- Open Graph (for LinkedIn, Facebook, etc.) -->
     <meta property="og:title" content="Karl-Anthony Garozzo – Portfolio" />
-    <meta property="og:description" content="Explore my projects, skills, and achievements in software development and engineering." />
+    <meta property="og:description" content="Explore my projects, skills, and achievements." />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="og.png" /> <!-- replace with your own preview image -->
+    <meta property="og:image" content="/og.png" />
 
-    <!-- Twitter Cards -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@KarlGarozzo" /> <!-- remove if you don’t use Twitter -->
     <meta name="twitter:title" content="Karl-Anthony Garozzo – Portfolio" />
-    <meta name="twitter:description" content="Official portfolio of Karl-Anthony Garozzo – engineer and passionate developer." />
-    <meta name="twitter:image" content="og.png" /> <!-- replace with your own preview image -->
+    <meta name="twitter:image" content="/og.png" />
   </head>
 
   <body>
     <div id="root"></div>
+    
     <script>
-      (function (location) {
-        if (location.search[1] === "/") {
-          const decoded = location.search
-            .slice(1)
-            .split("&")
-            .map((segment) => segment.replace(/~and~/g, "&"))
-            .join("?");
-
-          window.history.replaceState(
-            null,
-            "",
-            location.pathname.slice(0, -1) + decoded + location.hash
-          );
+      (function (l) {
+        if (l.search[1] === '/') {
+          var decoded = l.search.slice(1).split('&').map(function(s) { 
+            return s.replace(/~and~/g, '&') 
+          }).join('?');
+          window.history.replaceState(null, null, l.pathname.slice(0, -1) + decoded + l.hash);
         }
-      })(window.location);
+      }(window.location));
     </script>
+
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
