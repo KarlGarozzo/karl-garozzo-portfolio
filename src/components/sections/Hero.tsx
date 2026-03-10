@@ -5,7 +5,6 @@ import { MagneticButton } from '@/components/MagneticButton'
 import { ScrollAnimation } from '@/components/ScrollAnimations'
 import heroBg from '@/assets/hero-bg.jpg'
 import karlpicture from '@/assets/karl-picture-hero-1.jpg'
-import cvPdf from '@/assets/Karl-Anthony-Garozzo-CV.pdf';
 
 export function Hero() {
   const { t } = useLanguage()
@@ -103,7 +102,7 @@ export function Hero() {
                 size="lg" 
                 className="group bg-background/80 backdrop-ultra-blur border-primary/30 hover:bg-primary hover:text-primary-foreground shadow-card hover:shadow-glow transition-all duration-500 px-8 py-6 text-lg font-semibold"
               >
-                 <a href={cvPdf} target="_blank" rel="noopener noreferrer">
+                 <a href="/Karl-Anthony-Garozzo-CV.pdf" target="_blank" rel="noopener noreferrer">
                   <span className="relative z-10 flex items-center">
                     <Download className="whitespace-nowrap w-5 h-5 mr-2 transition-all duration-300" />{t('hero.cv')}
                   </span>
