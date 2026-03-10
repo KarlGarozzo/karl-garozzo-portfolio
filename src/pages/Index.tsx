@@ -22,7 +22,7 @@ const Index = () => {
   return (
     <ThemeProvider defaultTheme="light">
       <LanguageProvider>
-        <div className="min-h-screen bg-background text-foreground font-sans overflow-x-hidden relative">
+        <div className="h-screen bg-background text-foreground font-sans overflow-x-hidden overflow-y-auto snap-y snap-mandatory scroll-smooth relative no-scrollbar">
           {/* Enhanced Background Elements */}
           <AnimatedBackground />
           <ParticleSystem />
@@ -41,7 +41,7 @@ const Index = () => {
             <Hero />
             <About />
             <Education />
-            <Projects />
+            {/* <Projects />*/}
             <Experience />
             <Skills />
             <Contact />

@@ -7,9 +7,6 @@ import { ThemeProvider } from "@/components/ThemeProvider";
 import Index from "./pages/Index";
 import Card from "./pages/Card";
 import NotFound from "./pages/NotFound";
-import SecureLinkPage from "./pages/SecureLinkPage";
-// 1. IMPORTE TON NOUVEAU COMPOSANT
-import SecureCertificate from "./pages/SecureCertificate"; 
 
 const queryClient = new QueryClient();
 
@@ -24,9 +21,6 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/pro" element={<Card />} />
           <Route path="/business-card" element={<Card />} />
-          <Route path="/securelink" element={<SecureLinkPage />} />
-          <Route path="/securelink/certificate" element={<SecureCertificate />} />
-          
           <Route path="*" element={<NotFound />} />
         </Routes>
       </TooltipProvider>
