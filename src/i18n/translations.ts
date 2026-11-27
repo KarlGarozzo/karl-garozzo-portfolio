@@ -493,13 +493,12 @@ const messages = {
 
 export type Language = keyof typeof messages;
 
-type Primitive = string | number | boolean | null | undefined;
 type DotPrefix<TPrefix extends string, TKey extends string> =
   `${TPrefix}.${TKey}`;
 type NestedKeyOf<TObject extends object> = {
-  [Key in keyof TObject & string]: TObject[Key] extends Primitive
-    ? Key
-    : DotPrefix<Key, NestedKeyOf<TObject[Key]>>;
+  [Key in keyof TObject & string]: TObject[Key] extends object
+    ? DotPrefix<Key, NestedKeyOf<TObject[Key]>>
+    : Key;
 }[keyof TObject & string];
 
 export type TranslationKey = NestedKeyOf<(typeof messages)["en"]>;
